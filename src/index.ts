@@ -3,7 +3,7 @@ import { execa } from "execa";
 const DEFAULT_DESCRIPTION = "Your task finished";
 const DEFAULT_TITLE = "Done";
 
-const run = async (
+const notify = async (
   title: string = DEFAULT_TITLE,
   description: string = DEFAULT_DESCRIPTION,
 ) => {
@@ -12,4 +12,6 @@ const run = async (
   ]);
 };
 
-run();
+export default {
+  notify,
+};

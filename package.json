@@ -6,11 +6,12 @@
   },
   "version": "0.0.1",
   "description": "",
-  "type": "module",
+  "main": "./dist/index.js",
   "exports": "./dist/index.js",
-  "bin": "./dist/index.js",
+  "type": "module",
+  "bin": "./dist/cli.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node dist/cli.js",
     "dev": "tsup --watch",
     "build": "tsup"
   },
@@ -21,6 +22,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^20.11.19",
+    "commander": "^12.0.0",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
