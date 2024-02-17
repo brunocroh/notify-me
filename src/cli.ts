@@ -19,8 +19,8 @@ program
 
       console.log(result.stdout);
 
-      opts.title = "Your command finished";
-      opts.description = opts.command;
+      opts.title = opts.title || "Your command finished";
+      opts.description = opts.description || opts.command;
     }
 
     NotifyMe.notify(opts.title, opts.description, { sound: opts.sound });
