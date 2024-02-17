@@ -5,7 +5,6 @@ import { Command } from "commander";
 const program = new Command();
 
 program
-  .name("notify-me")
   .description("Notify me when my tasks are finished")
   .version("1.0.0", "-v, --version", "display the version number")
   .option("-t, --title <string>")
@@ -23,7 +22,7 @@ program
       opts.description = opts.description || opts.command;
     }
 
+    console.log({ opts });
     NotifyMe.notify(opts.title, opts.description, { sound: opts.sound });
-  });
-
-program.parse();
+  })
+  .parse(process.argv);

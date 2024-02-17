@@ -1,15 +1,8 @@
 import { defineConfig } from "tsup";
-import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
 import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
 
 export default defineConfig({
-  esbuildPlugins: [
-    NodeModulesPolyfillPlugin(),
-    NodeGlobalsPolyfillPlugin({
-      process: true,
-      buffer: true,
-    }),
-  ],
+  esbuildPlugins: [NodeModulesPolyfillPlugin()],
   clean: true,
   dts: true,
   bundle: true,
