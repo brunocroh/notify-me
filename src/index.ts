@@ -1,10 +1,5 @@
 import { execa } from "execa";
 
-type RunProps = {
-  title: string;
-  description: string;
-};
-
 const DEFAULT_DESCRIPTION = "Your task finished";
 const DEFAULT_TITLE = "Done";
 
