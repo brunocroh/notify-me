@@ -10,11 +10,10 @@ type NotifyOptions = {
 const notify = async (
   title: string = DEFAULT_TITLE,
   description: string = DEFAULT_DESCRIPTION,
-  options: NotifyOptions,
+  options?: NotifyOptions,
 ) => {
-  console.log({ options });
   await execa(`osascript`, [
-    `-e display notification "${description}" with title "${title}" ${options.sound ? 'sound name "Tink"' : ""}`,
+    `-e display notification "${description}" with title "${title}" ${options?.sound ? 'sound name "Tink"' : ""}`,
   ]);
 };
 
