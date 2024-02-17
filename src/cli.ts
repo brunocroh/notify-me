@@ -8,11 +8,11 @@ const program = new Command();
 program
   .description("Notify me when my tasks are finished")
   .option("-v, --version", "display the version number")
-  .option("-t, --title <string>")
-  .option("-d, --description <string>")
-  .option("-c, --command <string>")
-  .option("-a, --arguments [arguments...]")
-  .option("-s, --sound")
+  .option("-t, --title <string>", "Notification title")
+  .option("-d, --description <string>", "Notification description")
+  .option("-c, --command <string>", "A command to be run")
+  .option("-a, --arguments [arguments...]", "Arguments of command")
+  .option("-s, --sound", "Play a sound when notify")
   .action(async (opts) => {
     if (opts.version) {
       console.log(PackageJson.version);
