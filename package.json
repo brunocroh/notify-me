@@ -1,15 +1,19 @@
 {
-  "name": "notme",
+  "name": "@brunocroh/notify-me",
+  "private": false,
   "author": {
     "name": "Bruno Rodrigues",
     "url": "https://twitter.com/brunocroh"
   },
-  "version": "0.0.1",
+  "repository": "https://github.com/brunocroh/notify-me",
+  "version": "1.0.0",
   "description": "notify on your computer when you want",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "type": "module",
-  "bin": "./dist/cli.js",
+  "bin": {
+    "notify-me": "./dist/cli.js"
+  },
   "scripts": {
     "start": "node dist/cli.js",
     "dev": "tsup --watch",
