@@ -12,6 +12,7 @@ program
   .option("-d, --description <string>")
   .option("-c, --command <string>")
   .option("-a, --arguments [arguments...]")
+  .option("-s, --sound")
   .action(async (opts) => {
     if (opts.command) {
       const result = await execa(opts.command, opts.arguments);
@@ -22,7 +23,7 @@ program
       opts.description = opts.command;
     }
 
-    NotifyMe.notify(opts.title, opts.description);
+    NotifyMe.notify(opts.title, opts.description, { sound: opts.sound });
   });
 
 program.parse();

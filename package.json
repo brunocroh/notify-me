@@ -1,11 +1,11 @@
 {
-  "name": "local-notifications-js",
+  "name": "notify-me",
   "author": {
     "name": "Bruno Rodrigues",
     "url": "https://twitter.com/brunocroh"
   },
   "version": "0.0.1",
-  "description": "",
+  "description": "notify on your computer when you want",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
   "type": "module",
@@ -18,7 +18,8 @@
   "keywords": [
     "notifications",
     "local-notifications",
-    "npm tasks"
+    "brunocroh",
+    "notify-me"
   ],
   "license": "MIT",
   "devDependencies": {
