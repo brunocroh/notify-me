@@ -28,7 +28,6 @@ program
       opts.description = opts.description || opts.command;
     }
 
-    console.log({ opts });
     NotifyMe.notify(opts.title, opts.description, { sound: opts.sound });
   })
   .parse(process.argv);
