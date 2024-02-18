@@ -6,7 +6,7 @@
     "url": "https://twitter.com/brunocroh"
   },
   "repository": "https://github.com/brunocroh/notify-me",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "notify on your computer when you want",
   "main": "./dist/index.js",
   "exports": "./dist/index.js",
