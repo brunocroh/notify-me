@@ -1,7 +1,9 @@
 <h1 align="center">
   Notify Me
 </h1>
-
+<div align="center">
+<img width="374" alt="Screenshot 2024-02-17 at 21 36 33" src="https://github.com/brunocroh/notify-me/assets/13812512/4b847a84-4155-4013-9714-787586a7ef84">
+</div>
 <h4 align="center">
   <a href="https://github.com/brunocroh/notify-me#usage">How To Use</a>
 </h4>
