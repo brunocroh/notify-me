@@ -9,7 +9,7 @@
 </h4>
 
 <p align="center">
-    Create notifications on your OS from terminal or node 
+    Create notifications on your OS from terminal or code 
 </p>
 <p align="center">
   <a href="https://badge.fury.io/js/local-package-manager">
