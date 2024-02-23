@@ -2,7 +2,7 @@
 .NOTES
 Author: Den Delimarsky
 GitHub Gist: https://gist.github.com/dend
-Last Edit: 02/22/2024
+Last Edit: 02/23/2024
 #>
     [cmdletbinding()]
     Param (
@@ -24,7 +24,7 @@ Last Edit: 02/22/2024
     $SerializedXml.LoadXml($RawXml.OuterXml)
 
     $Toast = [Windows.UI.Notifications.ToastNotification]::new($SerializedXml)
-    $Toast.Tag = "PowerShell"
+    $Toast.Tag = [Guid]::NewGuid().ToString()
     $Toast.Group = "PowerShell"
 #    $Toast.ExpirationTime = [DateTimeOffset]::Now.AddMinutes(1)
 
