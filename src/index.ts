@@ -3,6 +3,9 @@ import { execa } from "execa";
 const PLATFORM = process.platform;
 const DEFAULT_DESCRIPTION = "Your task finished";
 const DEFAULT_TITLE = "Done";
+const path = require("path");
+const url = new URL(import.meta.url).pathname;
+const dirname = path.dirname(url.replace(/^\//, "")).replace(/\//g, '\\');
 
 type NotifyOptions = {
   sound: boolean;
@@ -18,6 +21,11 @@ const notify = async (
       `-a`,
       `NOTIFY-ME`,
       `${title} ${description}`,
+    ]);
+  }
+  else if (PLATFORM === "win32") {
+    return await execa('powershell.exe', [
+      `${dirname}\\Show-Notification.ps1 -Title "${title}" -Text "${description}"`
     ]);
   }
   await execa(`osascript`, [
