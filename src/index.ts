@@ -24,7 +24,7 @@ const notify = async (
     ]);
   } else if (PLATFORM === "win32") {
     return await execa("powershell.exe", [
-      `${dirname}\\Show-Notification.ps1 -Title "${title}" -Text "${description}"`,
+      `${dirname}\\lib\\Show-Notification.ps1 -Title "${title}" -Text "${description}"`,
     ]);
   }
   await execa(`osascript`, [
