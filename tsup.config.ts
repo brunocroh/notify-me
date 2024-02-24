@@ -1,5 +1,6 @@
 import { defineConfig } from "tsup";
 import { NodeModulesPolyfillPlugin } from "@esbuild-plugins/node-modules-polyfill";
+import { moveFiles } from "./scripts/mv";
 
 export default defineConfig({
   esbuildPlugins: [NodeModulesPolyfillPlugin()],
@@ -12,4 +13,7 @@ export default defineConfig({
   minify: false,
   target: "esnext",
   outDir: "dist",
+  onSuccess: async () => {
+    moveFiles();
+  },
 });
